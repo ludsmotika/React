@@ -55,8 +55,9 @@ code {
 }
 
 .card--image {
-  width: 100%;
   border-radius: 9px;
+  width: 100%;
+  height: 100%;
 }
 
 .card--stats {
@@ -66,4 +67,10 @@ code {
 
 .card--star {
   height: 14px;
+}
+
+.image-container {
+  background-size: cover; /* This will stretch the image to cover the entire div */
+  width: 100%;
+  height: 210px; /* Set a height for the div */
 }

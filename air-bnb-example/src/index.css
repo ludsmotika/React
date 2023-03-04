@@ -73,7 +73,7 @@ code {
   background-size: cover;
   /* This will stretch the image to cover the entire div */
   width: 100%;
-  height: 280px;
+  height: 270px;
 }
 
 .card--badge {

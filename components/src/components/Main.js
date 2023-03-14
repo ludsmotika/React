@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Main() {
+export default function Main(props) {
     return (
-        <main>
+        <main className={props.darkMode ? "dark" : ""}>
             <h1 className='main--title'>The most famous pizzas</h1>
             <ul className='main--facts'>
                 <li>Margherita: This classic Neapolitan pizza features tomato sauce, mozzarella cheese, and fresh basil leaves. It is named after Queen Margherita of Savoy, who was said to have enjoyed the pizza on a visit to Naples.</li>

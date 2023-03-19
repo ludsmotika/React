@@ -23,11 +23,10 @@ body {
 }
 
 main {
-  background-color: #F5F5F5;
-  height: 400px;
+  background-color: #e2e2e2;
   max-width: 800px;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,8 +35,10 @@ main {
 
 .header {
   text-align: center;
-  padding: 20%;
-  padding-top: 5%;
+  padding: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 20px;
 }
 
 .dice-container {
@@ -47,9 +48,13 @@ main {
 }
 
 .roll-button {
+  text-align: center;
   background: #5035FF;
   color: white;
   font-size: 30px;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .die-face {
@@ -61,4 +66,11 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  font-weight: bold;
 }
+
+.game-element{
+  display: flex;
+  flex-direction: column;
+}
+

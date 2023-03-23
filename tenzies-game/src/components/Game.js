@@ -36,15 +36,25 @@ export default function Game() {
     const diceArray = dices.map(x => <Dice key={x.key} value={x.value} isHeld={x.isHeld} holdDice={() => holdDice(x.key)} />);
 
     function roll() {
-        setDices(oldDices => oldDices.map(x => x.isHeld === true ? { ...x } : { ...x, value: Math.ceil(Math.random() * 6) }));
+
+        if (tenzies === false) {
+            setDices(oldDices => oldDices.map(x => x.isHeld === true ? { ...x } : { ...x, value: Math.ceil(Math.random() * 6) }));
+        }
+        else {
+            setDices(getNewDiceNumbers());
+            setTenzies(false);
+        }
+
     }
 
     return (
         <div className="game-element">
 
-            {tenzies ? <Confetti /> : <div className="dice-container">
+            {tenzies && <Confetti />}
+
+            <div className="dice-container">
                 {diceArray}
-            </div>}
+            </div>
 
             <button className="roll-button" onClick={roll}>{tenzies ? "New Game" : "Roll"}</button>
         </div>

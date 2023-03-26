@@ -1,9 +1,10 @@
 import React from "react";
+//import the methods for getting the data from the api file
+
 
 function Main(props) {
-    return (<div className={props.darkMode ? 'dark' : ''}>
-        <h1>Header element</h1>
-    </div>);
+
+  
 }
 
 

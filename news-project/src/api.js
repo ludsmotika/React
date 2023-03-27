@@ -1,9 +1,8 @@
-const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('9cf6b520a3fe4addaa414169eb6ae1f9');
-
-function getDailyNews() {
+import axios from "axios";
 
 
+export default async function getDailyNews() {
 
-    return data;
+    const responce = await axios.get('https://newsapi.org/v2/everything?q=bitcoin&apiKey=9cf6b520a3fe4addaa414169eb6ae1f9');
+    return responce;
 }

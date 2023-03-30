@@ -10,7 +10,7 @@ function NewsList() {
     React.useEffect(() => {
 
         const getArticles = async () => {
-            let res = await axios.get('https://newsapi.org/v2/everything?q=bitcoin&apiKey=9cf6b520a3fe4addaa414169eb6ae1f9');
+            let res = await axios.get('https://newsapi.org/v2/top-headlines?country=bg&apiKey=9cf6b520a3fe4addaa414169eb6ae1f9');
             setArticles(res.data.articles);
         }
 

@@ -15,7 +15,7 @@ code {
 
 header {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   height: 100px;
   background-color: #d3f4ff;
   align-items: center;
@@ -24,7 +24,7 @@ header {
 }
 
 .dark {
-  background-color: rgb(37, 36, 36);
+  background-color: rgb(26, 26, 26);
   color: white;
 }
 
@@ -54,6 +54,7 @@ header {
   padding: 16px;
   font-size: 16px;
   border: none;
+  white-space: nowrap;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -66,23 +67,35 @@ header {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: white;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
+
+.dropdown-content.dark {
+  background-color: rgb(40, 40, 40);
+  color: white;
+}
+
+.dropdown-content.dark a {
+  color: white;
+}
+
+
 /* Links inside the dropdown */
 .dropdown-content a {
   padding: 12px 16px;
   text-decoration: none;
+  color: black;
   display: block;
 }
 
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: white;
 }
 
 /* Show the dropdown menu on hover */
@@ -93,4 +106,70 @@ header {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: #b8e9ff;
+}
+
+.dropdown:hover .dropbtn.dark {
+  background-color: #6c6c6c;
+}
+
+
+
+
+
+#scroll-container {
+  font-size: 22px;
+  border: 1px solid #007fff;
+  border-radius: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scroll  linear infinite;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+#scroll-text {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+  }
+
+  to {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
 }

@@ -42,8 +42,8 @@ function Header(props) {
 
         </div>
 
-        <div id="scroll-container">
-            <div id="scroll-text">{bestTitles.map(x => x.substring(0, x.indexOf('-'))).join('.\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0')}</div>
+        <div className={`scroll-container ${props.darkMode ? 'dark' : ''}`}>
+            <div className="scroll-text">{bestTitles.map(x => x.substring(0, x.indexOf(' - '))).join('\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002')}</div>
         </div>
 
         <img className="header-img" src={props.darkMode ? './resources/sun.png' : './resources/moon.png'} onClick={() => props.toogleDarkSide()}></img>

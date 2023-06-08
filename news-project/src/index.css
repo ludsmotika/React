@@ -113,29 +113,41 @@ header {
 }
 
 
+.scroll-container.dark{
+  background-color: rgb(65, 65, 65);
+}
 
 
 
-#scroll-container {
+.scroll-container {
   font-size: 22px;
   border: 1px solid #007fff;
+  background-color: #b6dbff;
   border-radius: 10px;
   white-space: nowrap;
   overflow: hidden;
-  animation: scroll  linear infinite;
+  animation: scroll linear infinite;
   padding: 10px;
   margin-left: 20px;
 }
 
-#scroll-text {
+.scroll-text {
   /* animation properties */
+  display: flex;
+  flex-direction: row;
+  font-family: Georgia;
+  font-weight: 10;
+  text-transform: uppercase;
+  font-weight: 400px;
+
+
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
 
-  -moz-animation: my-animation 15s linear infinite;
-  -webkit-animation: my-animation 15s linear infinite;
-  animation: my-animation 15s linear infinite;
+  -moz-animation: my-animation 65s linear infinite;
+  -webkit-animation: my-animation 65s linear infinite;
+  animation: my-animation 65s linear infinite;
 }
 
 /* for Firefox */
@@ -162,14 +174,14 @@ header {
 
 @keyframes my-animation {
   from {
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+    -moz-transform: translateX(10%);
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
   }
 
   to {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+    -moz-transform: translateX(-1000%);
+    -webkit-transform: translateX(-1000%);
+    transform: translateX(-1000%);
   }
 }
